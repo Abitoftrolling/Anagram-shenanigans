@@ -24,7 +24,7 @@ def get_words(word):
         return anagrams
     else:
         #prints error if the request fails and return an empty list
-        print(f"API error {response.status_code}")
-        return []
+       print(f"API error {response.status_code}")
+       return []
 
 
