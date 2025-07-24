@@ -1,4 +1,5 @@
 import random 
+from anagram_api import get_words #import API file 
 
 #function to load words from a text file 
 def load_words():
@@ -12,7 +13,16 @@ def load_words():
 
 #functon to pick a random word and shuffle its letters 
 def get_letters(words):
-    word = random.choice(words) #picks the random word from list
     letters = list(word)  #converts word into a list of letters
     random.shuffle(letters)  #shuffles the letters randomly
     return letters, word  #returns the shuffles letters and the og word 
+
+#function to use API and get anagrams
+def from_api():
+    word_list = load_words() #load word list 
+    base_word = random.choice(word_list) #pick a random word
+    letters = get_letters(base_word) #shuffles letters for player
+
+    anagrams = get_words(base_word) #call API to get anagrams for base word
+
+    return letters, anagrams
