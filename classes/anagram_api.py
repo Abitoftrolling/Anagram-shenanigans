@@ -1,10 +1,10 @@
 import requests
 
 #API credentials from RapidAPI
-api_host = "x-rapidapi-host: word-checker-api.p.rapidapi.com"
+api_host = "word-checker-api.p.rapidapi.com"
 api_key = "c79c515bb3msh30d268472db25dap129bb0jsndee7029ec1f8"
 
-#function to get anagrams for a given word using the Word Checker API
+#function to solve anagrams for a given word using the Word Checker API
 def get_words(word):
     url = f"https://word-checker-api.p.rapidapi.com/v1/tools/anagram-solver/{word}"
 
