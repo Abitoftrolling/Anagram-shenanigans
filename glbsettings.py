@@ -9,4 +9,4 @@ RED = (200, 0, 0)
 FONT_NAME = "Times New Roman"
 FONT_SIZE = 48
 
-TIMER_DURATION = 60 
+TIMER_DURATION = 90
