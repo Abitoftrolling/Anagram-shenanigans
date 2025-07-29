@@ -11,7 +11,7 @@ class LevelSystem:
     
     def level_up(self):
         self.level += 1                          #moves to next lvl
-        self.score_target += 150                 #subject to change, increases score for next level
+        self.score_target += 20                 #subject to change, increases score for next level
         return self.time_bonus
     
     def get_level(self):
