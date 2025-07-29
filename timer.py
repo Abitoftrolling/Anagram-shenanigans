@@ -1,6 +1,6 @@
 # timer.py
 import pygame
-from classes.glbsettings import TIMER_DURATION
+from glbsettings import TIMER_DURATION
 
 class Timer:
     def __init__(self):
