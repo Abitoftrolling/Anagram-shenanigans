@@ -1,4 +1,5 @@
 import random
+from projFiles.anagram_solver import find_anagrams
 
 #function to load words from a text file 
 def load_words():
@@ -16,4 +17,9 @@ def get_letters(word):
     random.shuffle(letters)  #shuffles the letters randomly
     return letters, word  #returns the shuffles letters and the og word 
 
-
+def get_valid_anagrams(word_list, min_anagrams=10):
+    while True:
+        word = random.choice(word_list)
+        anagrams = find_anagrams(word, word_list)
+        if len(anagrams) >= min_anagrams:
+            return word, anagrams
