@@ -13,5 +13,3 @@ class Timer:
     def is_time_up(self):
         return self.get_time_left() == 0
     
-    def add_time(self, seconds):
-        self.start_ticks -= seconds * 1000

@@ -5,7 +5,7 @@ from UI import load_fonts, draw_interface, draw_start_screen, draw_game_over_scr
 from projFiles.point_system import PointSystem
 from projFiles.levels import LevelSystem
 from timer import Timer
-from glbsettings import INVALID_FLASH_DURATION, FONT_SIZE
+from glbsettings import INVALID_FLASH_DURATION
 
 pygame.init()
 pygame.mixer.music.load("projFiles/Don't Tap The Glass.mp3")
@@ -56,9 +56,9 @@ while running:
                         if added:
                             current_input = ""
                             if level_system.should_level_up(point_system.get_score()):
-                                time_bonus = level_system.level_up()
-                                timer.add_time(time_bonus)
+                                level_system.level_up()
                                 # reset new level 
+                                timer = Timer()
                                 curr_word, valid_anagrams = get_valid_anagrams(words, min_anagrams=10)
                                 curr_letters, _ = get_letters(curr_word)
                                 point_system = PointSystem()
